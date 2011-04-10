@@ -26,7 +26,7 @@ $result = mysql_query($query) or die('Query failed. ' . mysql_error());
 if($result)
 	{
 		echo "registration successful";
-		header('Location:profile.php');
+		header('Location:profile.php?user_email='.$u_email);
 	}
 else
 {echo "registration failed";}
