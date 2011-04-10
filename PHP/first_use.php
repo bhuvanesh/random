@@ -1,7 +1,7 @@
 <?php
 //To create the required database and tables implemented so far by the users
 //change the variables in the db_connect.php according to your system config of phpmyadmin and mysqlmyadmin
-include("../db_connect.php");
+include("db_connect.php");
 mysql_connect($db_host,$db_user,$db_pass);
 $query="create database sandbox";
 $result = mysql_query($query) or die('Query failed. ' . mysql_error());

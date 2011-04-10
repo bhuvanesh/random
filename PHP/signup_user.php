@@ -12,7 +12,7 @@
   } else {
     //code here to handle a successful CAPTCHA verification
 
-include ("../db_connect.php");
+include ("db_connect.php");
 mysql_connect($db_host,$db_user,$db_pass);
 mysql_select_db($db_name) or die( "Unable to select database");
 
