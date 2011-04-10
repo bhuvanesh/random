@@ -23,8 +23,14 @@ $u_age=$_POST['age'];
 
 $query="insert into user_account values('$u_name','$u_pass','$u_email','$u_age')";
 $result = mysql_query($query) or die('Query failed. ' . mysql_error());
-echo $result;
+if($result)
+	{
+		echo "registration successful";
+		header('Location:profile.php');
+	}
+else
+{echo "registration failed";}
 
-  }
+}
   ?>
 

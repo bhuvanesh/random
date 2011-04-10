@@ -9,15 +9,20 @@ $u_email=$_POST['email'];
 $query="select password from user_account where email='$u_email'";
 $result = mysql_query($query) or die('Query failed. ' . mysql_error());
 //using row to store the values in an assosiative array format
+$t_pass=NULL;
 while($row=mysql_fetch_array($result))  
 {
 $t_pass=$row['password'];
 }
 //echo $result;
 if ( $t_pass == $u_pass)
-echo "Hello world";
+	{
+		header('Location:profile.php?user_email='.$u_email);
+	}
 else
-echo "authentication failed";
+	{
+		echo "authentication failed";
+	}
 
 
 ?>
