@@ -1,5 +1,5 @@
 <html>
-<body>
+<body onLoad="javascript:document.forms[0].reset()">
 <link href="../CSS/signup_form.css" rel="stylesheet" type="text/css" />
 <form action="signup_user.php" method="POST"><br/>
 <fieldset>
